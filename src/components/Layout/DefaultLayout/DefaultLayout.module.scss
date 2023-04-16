@@ -6,7 +6,7 @@
 }
 
 .container {
-    margin-top: 60px;
+    margin-top: var(--default-layout-header-hight);
     position: relative;
     display: flex;
     justify-content: space-between;

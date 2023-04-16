@@ -4,7 +4,7 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
     position: fixed;
     top: 0;
-    background: rgb(255, 255, 255);
+    background: var(--white-color);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -17,4 +17,112 @@
     max-width: 100%;
     padding-left: 16px;
     padding-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+}
+
+.link-logo {
+    font-size: 0;
+}
+
+.search {
+    position: relative;
+    min-width: 200px;
+    padding: 0 8px;
+}
+
+.search-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+}
+
+.input-element {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0px;
+    width: 306px;
+    color: rgb(22, 24, 35);
+    caret-color: var(--primary-color);
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    -ms-appearance: textfield;
+    appearance: textfield;
+    &:focus:not(:placeholder-shown) ~ .input-border {
+        display: block;
+    }
+    &:not(:placeholder-shown) ~ .search-btn svg {
+        fill: rgba(22, 24, 35, 0.75);
+    }
+}
+
+.input-border {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1.5px solid rgba(22, 24, 35, 0.2);
+    border-radius: 92px;
+    z-index: -1;
+}
+
+.clear-input-btn,
+.loading-input-btn {
+    font-size: 0px;
+}
+
+.span-spliter {
+    width: 1px;
+    height: 28px;
+    margin: -3px 0;
+    background: rgba(22, 24, 35, 0.12);
+}
+
+.search-btn {
+    padding: 11px 16px 11px 12px;
+    margin: -12px -16px;
+    font-size: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-left: 0;
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+    &:active {
+        background: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.search-icon-container {
+    outline: none;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: #333;
 }
