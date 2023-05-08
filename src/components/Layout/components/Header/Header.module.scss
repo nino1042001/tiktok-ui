@@ -23,7 +23,7 @@
     flex-direction: row;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     min-width: 300px;
@@ -33,9 +33,13 @@
     font-size: 0;
 }
 
+.search-result,
+.search {
+    min-width: 415px;
+}
+
 .search {
     position: relative;
-    min-width: 200px;
     padding: 0 8px;
 }
 
@@ -50,6 +54,15 @@
     overflow: hidden;
     z-index: 1;
     margin: 0;
+}
+
+.search-title {
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(22, 24, 35, 0.75);
+    padding: 5px 12px;
 }
 
 .input-element {
@@ -67,7 +80,7 @@
     -moz-appearance: textfield;
     -ms-appearance: textfield;
     appearance: textfield;
-    &:focus:not(:placeholder-shown) ~ .input-border {
+    &:focus ~ .input-border {
         display: block;
     }
     &:not(:placeholder-shown) ~ .search-btn svg {
