@@ -1,0 +1,75 @@
+.wrapper {
+    font-size: 1.6rem;
+    font-weight: 700;
+    min-width: 100px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    line-height: 22px;
+    min-height: 36px;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    cursor: pointer;
+    + .wrapper {
+        margin-left: 16px;
+    }
+}
+
+// Button types
+
+.upload {
+    display: block;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 22px;
+    padding: 0;
+}
+.primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+
+.outline {
+    color: var(--primary-color);
+    border-color: currentColor;
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.getapp {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 1.4rem;
+    padding: 0 8px;
+    border-radius: 52px;
+    line-height: 30px;
+    min-width: 90px;
+    min-height: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(22, 24, 35, 0.12);
+    transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1);
+    transform-origin: right bottom;
+    transform: none;
+    white-space: nowrap;
+}
+
+// Button sizes
+.small {
+    min-width: 88px;
+    padding: 0 10px;
+    line-height: 22px;
+    font-weight: 600;
+    min-height: 28px;
+}
+
+.large {
+    min-height: 48px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 25px;
+    padding: 6px 8px;
+}
